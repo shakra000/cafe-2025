@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Shakra — Alchemy of Taste</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- animated particle canvas -->
+  <canvas id="particleCanvas"></canvas>
+
+  <div class="custom-cursor"></div>
+
+  <nav class="glass-nav">
+    <div class="nav-container">
+      <div class="logo">SHAKRA<span>✦</span></div>
+      <ul class="nav-links">
+        <li data-section="home" class="active">Home</li>
+        <li data-section="about">Essence</li>
+        <li data-section="menu">Alchemy Menu</li>
+        <li data-section="services">Rituals</li>
+        <li data-section="contact">Conjure</li>
+      </ul>
+      <div class="menu-toggle"><i class="fas fa-burst"></i></div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="home" class="section active-section">
+      <div class="hero-container">
+        <div class="hero-left">
+          <div class="badge glow">✦ artisanal since 2025 ✦</div>
+          <h1 class="hero-title">Where coffee becomes <span class="accent">alchemy</span></h1>
+          <div class="hero-underline"></div>
+          <p class="hero-desc">Shakra brews more than caffeine — we craft emotion, mystery, and a touch of the extraordinary. Step into a realm of sensory wonder.</p>
+          <div class="hero-buttons">
+            <button class="btn-primary" id="exploreBtn">Explore the unknown <i class="fas fa-magic"></i></button>
+            <button class="btn-outline" id="bookBtn">Reserve a cauldron <i class="fas fa-moon"></i></button>
+          </div>
+          <div class="floating-cup" id="floatingCup">
+            <div class="cup-mask">
+              <i class="fas fa-mug-hot"></i>
+              <div class="steam"></div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-right">
+          <div class="kinetic-cup" id="kineticCup">
+            <div class="cup-body">
+              <div class="cup-shadow"></div>
+              <div class="liquid"></div>
+            </div>
+            <div class="handle"></div>
+            <div class="aroma-wave"></div>
+          </div>
+        </div>
+      </div>
+      <div class="scroll-indicator">scroll for enchantment <i class="fas fa-arrow-down"></i></div>
+    </section>
+
+    <!-- ABOUT / ESSENCE -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text" data-aos="fade-up">
+            <span class="section-tag">✦ The philosophy ✦</span>
+            <h2>Brewing stories, one cup at a time</h2>
+            <p>Shakra is not just a café — it’s a sanctuary for dreamers. Every bean is sourced from mystical highlands, roasted with lunar cycles, and served with intention. Our name echoes "gratitude" in ancient dialect, and we honor that with every pour.</p>
+            <div class="stats">
+              <div class="stat"><span class="stat-number" data-target="2345">0</span><span>+ magical cups</span></div>
+              <div class="stat"><span class="stat-number" data-target="12">0</span><span>rare blends</span></div>
+              <div class="stat"><span class="stat-number" data-target="4.9">0</span><span>✦ celestial rating</span></div>
+            </div>
+          </div>
+          <div class="about-media">
+            <div class="float-card">
+              <i class="fas fa-mortar-pestle"></i>
+              <h3>alchemical roast</h3>
+              <p>small batch · intention infused</p>
+            </div>
+            <div class="float-card second">
+              <i class="fas fa-hand-sparkles"></i>
+              <h3>ritual service</h3>
+              <p>tarot readings + coffee pairing</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MENU – 3D FLIP CARDS -->
+    <section id="menu" class="section">
+      <div class="container">
+        <div class="menu-header">
+          <span class="section-tag">✦ potions & elixirs ✦</span>
+          <h2>Our mystical menu</h2>
+        </div>
+        <div class="menu-grid" id="menuGrid">
+          <!-- cards will be inserted via JS for dynamic animation -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES / RITUALS -->
+    <section id="services" class="section">
+      <div class="container">
+        <div class="services-header">
+          <span class="section-tag">✦ sacred rituals ✦</span>
+          <h2>Experiences beyond the ordinary</h2>
+        </div>
+        <div class="services-scroll">
+          <div class="service-card"><i class="fas fa-chalkboard-user"></i><h3>Latte art séance</h3><p>Channel spirits into foam</p><div class="hover-glow"></div></div>
+          <div class="service-card"><i class="fas fa-drumstick-bite"></i><h3>Midnight bakery</h3><p>Moon-infused pastries</p><div class="hover-glow"></div></div>
+          <div class="service-card"><i class="fas fa-vinyl"></i><h3>Vinyl & vibes</h3><p>Analog sound ritual every eve</p><div class="hover-glow"></div></div>
+          <div class="service-card"><i class="fas fa-tarot"></i><h3>Tarot & tonic</h3><p>Espresso + oracle readings</p><div class="hover-glow"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT / CONJURE -->
+    <section id="contact" class="section">
+      <div class="container contact-container">
+        <div class="contact-card" data-tilt>
+          <div class="contact-left">
+            <i class="fas fa-crystal-ball"></i>
+            <h2>Conjure a message</h2>
+            <p>We shall answer within two moon cycles</p>
+            <div class="contact-info">
+              <p><i class="fas fa-location-dot"></i> 9¾ Alchemy Lane, Mystic District</p>
+              <p><i class="fas fa-phone-alt"></i> +1 (800) 565-SHAKRA</p>
+              <p><i class="fas fa-envelope"></i> awaken@shakra.com</p>
+            </div>
+          </div>
+          <div class="contact-right">
+            <input type="text" placeholder="your ethereal name" id="contactName">
+            <input type="email" placeholder="raven@mail.com" id="contactEmail">
+            <textarea rows="4" placeholder="weave your message..."></textarea>
+            <button id="sendSpell" class="btn-primary">Send ✦ <i class="fas fa-feather"></i></button>
+            <div id="formFeed" class="form-feedback"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <p>© 2025 Shakra — where every sip bends reality.</p>
+      <div class="social-icons">
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-x-twitter"></i>
+        <i class="fab fa-tiktok"></i>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
